@@ -71,12 +71,38 @@ function removeCoctailWithClick () {
       if (result) {
         removeCoctailByName(database, name)
         renderCoctails(database)
-        alert('The coctail is removed')
+        alert('The coctail is removed!')
       } else {
-        alert('Okay, the coctails remains')
+        alert('Okay, the coctails remains!')
       }
     })
   }
 }
 
-//------------------------------------------------------------//
+//--------------------------------------------------------------//
+
+function addCoctail (event) {
+    event.preventDefault ();
+
+    let name = document.getElementById("name").value;
+    let liquor = document.getElementById("liquor").value;
+    let cl = Number(document.getElementById("cl").value);
+    let garniture = document.getElementById("garniture").value;
+
+    let coctail = createNewCoctail (name, liquor, cl, garniture);
+
+    addCoctailToDatabase(database, coctail);
+    renderCoctails(database);
+
+    let form = document.getElementById("add-coctail-form");
+    form.reset();
+}
+
+function addClickToAddButton () {
+    let form = document.getElementById("add-coctail-form");
+    form.addEventListener("submit", addCoctail)
+}
+
+//--------------------------------------------------------------//
+
+addClickToAddButton ();
