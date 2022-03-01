@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>U2</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Coctails</h1>
+
     <form id="add-coctail-form">
-        <input id="name" type="text" placeholder="Name of drink">
-        <input id="mainIngredient" type="text" placeholder="Main ingredient">
-        <input id="cl" type="number" placeholder="Cl of main ingredient">
-        <input id="garniture" type="text" placeholder="Garniture">
-        <button>Add</button>
+      <input id="name" type="text" placeholder="Coctail">
+      <input id="liquor" type="text" placeholder="Liqour">
+      <input id="cl" type="number" placeholder="Cl liqour">
+      <input id="garniture" type="text" placeholder="Garniture">
+      <button>Add</button>
     </form>
-<script src="database.js"></script>
-<script src="main.js"></script>
-   
-</body>
+    
+      <!-- <div id="button-div">
+        <button id="add">Add new coctail</button>
+      </div> -->
+      <div id="headers">
+        <div>Nr</div>
+        <div>Coctail</div>
+        <div>Liquor</div>
+        <div>Cl liquor</div>
+        <div>Garniture</div>
+        <div>Click to remove</div>
+      </div>
+
+      <div id="coctails">
+      </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

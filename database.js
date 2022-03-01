@@ -74,11 +74,11 @@ let database = [
     garniture: 'Mint'
   },
 
-  {
-    id: 10,
-    name: 'Frozen Strawberry Daiquiri',
-    mainIngredient: 'Rom',
-    cl: 5,
-    garniture: 'Strawberry'
-  }
+  // {
+  //   id: 10,
+  //   name: 'Frozen Strawberry Daiquiri',
+  //   mainIngredient: 'Rom',
+  //   cl: 5,
+  //   garniture: 'Strawberry'
+  // }
 ]
