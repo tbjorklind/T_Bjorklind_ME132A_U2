@@ -1,0 +1,72 @@
+
+:root {
+    --fontFamily: 'Roboto', sans-serif;
+
+}
+
+body {
+font-family: var(--fontFamily);
+margin: 0;
+background-color: white;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#headers {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr;
+    background-color: white;
+    width: 70vw;
+    border: 1px solid black;
+    padding: 15px 10px;
+}
+#coctails {
+    border: 1px solid black;
+    margin-top: 4px;
+}
+.coctail {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr;
+    width: 70vw;
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    align-items: center;
+}
+#coctails:last-child {
+    border-bottom: 0px;
+}
+
+button {
+    border-radius: 0px;
+    border: 1px solid black;
+    font-family: var(--fontFamily);
+    padding: 5px 0px;
+    background-color:  white;
+
+}
+button:hover {
+    box-shadow: 0 0 5px rgb(126, 113, 95);
+    cursor: pointer;
+}
+
+#button-div {
+    display: flex;
+    width: 70vw;
+    justify-content: start;
+    margin-bottom: 15px;
+}
+
+#add {
+    margin-left: -10px;
+    padding: 5px 45px;
+}
