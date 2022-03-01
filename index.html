@@ -17,17 +17,35 @@
     <div id="wrapper">
       <h1>Coctails</h1>
 
-    <form id="add-coctail-form">
-      <input id="name" type="text" placeholder="Coctail">
-      <input id="liquor" type="text" placeholder="Liqour">
-      <input id="cl" type="number" placeholder="Cl liqour">
-      <input id="garniture" type="text" placeholder="Garniture">
-      <button>Add</button>
-    </form>
-    
-      <!-- <div id="button-div">
-        <button id="add">Add new coctail</button>
-      </div> -->
+      <form id="add-coctail-form">
+        <input id="name" type="text" placeholder="Coctail" />
+        <input id="liquor" type="text" placeholder="Liqour" />
+        <input id="cl" type="number" placeholder="Cl liqour" />
+        <input id="garniture" type="text" placeholder="Garniture" />
+        <button>Add</button>
+      </form>
+
+      <div id="filters">
+        <form id="filter-by-liqour">
+          <input
+            id="filter-liqour"
+            type="text"
+            placeholder="Filter by liqour"
+          />
+          <button>Filter</button>
+        </form>
+        <form id="filter-by-garniture">
+          <input
+            id="filter-garniture"
+            type="text"
+            placeholder="Filter by garniture"
+          />
+          <button>Filter</button>
+        </form>
+
+        <button id="show-all" type="button">Show all coctails</button>
+      </div>
+
       <div id="headers">
         <div>Nr</div>
         <div>Coctail</div>
@@ -37,8 +55,7 @@
         <div>Click to remove</div>
       </div>
 
-      <div id="coctails">
-      </div>
+      <div id="coctails"></div>
     </div>
 
     <script src="database.js"></script>
