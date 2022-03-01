@@ -1,8 +1,5 @@
 'use strict'
 
-createNewCoctail()
-renderCoctails(database)
-
 // Creates a new coctail object, and returns it
 function createNewCoctail (name, liquor, cl, garniture) {
   let coctail = {
@@ -108,9 +105,63 @@ function addClickToAddButton () {
 
 //--------------------------------filter coctails------------------------//
 
+//--------------------------------filter by liquor------------------------//
+function getCoctailsByLiquor (coctails, liquor) {
+  let coctailsByLiquor = []
 
+  for (let coctail of coctails) {
+    if (coctail.liquor.toLowerCase() == liquor.toLowerCase()) {
+      coctailsByLiquor.push(coctail)
+    }
+  }
+  return coctailsByLiquor
+}
+function filterByLiquor (event) {
+  event.preventDefault()
+  let liquor = document.getElementById('filter-liquor').value
+  let coctails = getCoctailsByLiquor(database, liquor)
 
+  renderCoctails(coctails)
+}
+//--------------------------------filter by garniture------------------------//
+
+function filterByGarniture (event) {
+  event.preventDefault()
+  let garniture = document.getElementById('filter-garniture').value
+  let coctails = getCoctailsByGarniture(database, garniture)
+
+  renderCoctails(coctails)
+}
+
+function getCoctailsByGarniture (coctails, garniture) {
+  let coctailsByGarniture = []
+
+  for (let coctail of coctails) {
+    if (coctail.garniture.toLowerCase() == garniture.toLowerCase()) {
+      coctailsByGarniture.push(coctail)
+    }
+  }
+  return coctailsByGarniture
+}
+
+//--------------------------------------------------------------------------//
+
+function setFilters () {
+  let liquorForm = document.getElementById('filter-by-liquor')
+  let garnitureForm = document.getElementById('filter-by-garniture')
+  let showAll = document.getElementById('show-all')
+
+  liquorForm.addEventListener('submit', filterByLiquor)
+  garnitureForm.addEventListener('submit', filterByGarniture)
+  showAll.addEventListener('click', function () {
+    document.getElementById('filter-liquor').value = ''
+    document.getElementById('filter-by-garniture').value = ''
+    renderCoctails(database)
+  })
+}
 
 //------------------------------------------------------------------------//
 
 addClickToAddButton()
+setFilters()
+renderCoctails(database)
