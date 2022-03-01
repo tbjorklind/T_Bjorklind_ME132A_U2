@@ -3,81 +3,91 @@
 // My array of coctails
 let database = [
   {
+    nr: 1,
     id: 1,
     name: 'Gin & Tonic',
-    mainIngredient: 'Gin',
+    liquor: 'Gin',
     cl: 4,
     garniture: 'Lemon'
   },
 
   {
+    nr: 2,
     id: 2,
     name: 'Whisky Sour',
-    mainIngredient: 'Whisky',
+    liquor: 'Whisky',
     cl: 6,
     garniture: 'None'
   },
 
   {
+    nr: 3,
     id: 3,
     name: 'Aperol Spritz',
-    mainIngredient: 'Aperol',
+    liquor: 'Aperol',
     cl: 4,
     garniture: 'Orange'
   },
 
   {
+    nr: 4,
     id: 4,
     name: 'Moscow mule',
-    mainIngredient: 'Vodka',
+    liquor: 'Vodka',
     cl: 4,
     garniture: 'Lime'
   },
 
   {
+    nr: 5,
     id: 5,
     name: 'Mojito',
-    mainIngredient: 'Rum',
+    liquor: 'Rum',
     cl: 5,
     garniture: 'Mint'
   },
 
   {
+    nr: 6,
     id: 6,
     name: 'Caipirinha',
-    mainIngredient: 'Cachaca',
+    liquor: 'Cachaca',
     cl: 5,
     garniture: 'Lime'
   },
 
   {
+    nr: 7,
     id: 7,
     name: 'Amaretto Sour',
-    mainIngredient: 'Amaretto',
+    liquor: 'Amaretto',
     cl: 6,
     garniture: 'None'
   },
 
   {
+    nr: 8,
     id: 8,
     name: 'Gin Fizz',
-    mainIngredient: 'Gin',
+    liquor: 'Gin',
     cl: 4,
     garniture: 'Lemon'
   },
 
   {
+    nr: 9,
     id: 9,
     name: 'Mint Julep',
-    mainIngredient: 'Whisky',
+    liquor: 'Whisky',
     cl: 6,
     garniture: 'Mint'
-  },
+  }
 
   // {
+  //   nr: 10,
   //   id: 10,
   //   name: 'Frozen Strawberry Daiquiri',
-  //   mainIngredient: 'Rom',
+  //   liquor: 'Rom',
   //   cl: 5,
   //   garniture: 'Strawberry'
   // }

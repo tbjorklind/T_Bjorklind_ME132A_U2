@@ -3,7 +3,6 @@
 createNewCoctail()
 renderCoctails(database)
 
-
 // Creates a new coctail object, and returns it
 function createNewCoctail (name, liquor, cl, garniture) {
   let coctail = {
@@ -79,30 +78,39 @@ function removeCoctailWithClick () {
   }
 }
 
-//--------------------------------------------------------------//
+//----------------------------add coctail----------------------------//
 
 function addCoctail (event) {
-    event.preventDefault ();
+  event.preventDefault()
 
-    let name = document.getElementById("name").value;
-    let liquor = document.getElementById("liquor").value;
-    let cl = Number(document.getElementById("cl").value);
-    let garniture = document.getElementById("garniture").value;
+  let name = document.getElementById('name').value
+  let liquor = document.getElementById('liquor').value
+  let cl = Number(document.getElementById('cl').value)
+  let garniture = document.getElementById('garniture').value
 
-    let coctail = createNewCoctail (name, liquor, cl, garniture);
+  let coctail = createNewCoctail(name, liquor, cl, garniture)
 
-    addCoctailToDatabase(database, coctail);
-    renderCoctails(database);
+  let form = document.getElementById('add-coctail-form')
+  form.reset()
 
-    let form = document.getElementById("add-coctail-form");
-    form.reset();
+  if (name == '' || liquor == '' || cl == '' || garniture == '') {
+    alert('Oh, not all fields were filled. Try again!')
+  } else {
+    addCoctailToDatabase(database, coctail)
+    renderCoctails(database)
+  }
 }
 
 function addClickToAddButton () {
-    let form = document.getElementById("add-coctail-form");
-    form.addEventListener("submit", addCoctail)
+  let form = document.getElementById('add-coctail-form')
+  form.addEventListener('submit', addCoctail)
 }
 
-//--------------------------------------------------------------//
+//--------------------------------filter coctails------------------------//
 
-addClickToAddButton ();
+
+
+
+//------------------------------------------------------------------------//
+
+addClickToAddButton()
