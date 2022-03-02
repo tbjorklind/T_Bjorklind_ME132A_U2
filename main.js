@@ -21,7 +21,7 @@ function addCoctailToDatabase (database, coctail) {
 function renderCoctail (coctail) {
   let div = document.createElement('div')
   div.classList.add('coctail')
-
+  div.id = coctail.id
   div.innerHTML = `
     <div>${coctail.nr}</div>
     <div>${coctail.name}</div>
@@ -46,11 +46,12 @@ function renderCoctails (coctails) {
 
 //------------------------remove coctail------------------------//
 
-function removeCoctailByName (database, name) {
+function removeCoctailById (database, id) {
   for (let i = 0; i < database.length; i++) {
     let coctail = database[i]
-    if (coctail.name == name) {
+    if (coctail.id == id) {
       database.splice(i, 1)
+      return
     }
   }
 }
@@ -62,10 +63,10 @@ function removeCoctailWithClick () {
     button.addEventListener('click', function (event) {
       let result = confirm('Are you sure you want to remove this coctail?')
       let button = event.target
-      let name = button.parentElement.children[1].textContent
+      let id = button.parentElement.id
 
       if (result) {
-        removeCoctailByName(database, name)
+        removeCoctailById(database, id)
         renderCoctails(database)
         alert('The coctail is removed!')
       } else {
@@ -86,6 +87,8 @@ function addCoctail (event) {
   let garniture = document.getElementById('garniture').value
 
   let coctail = createNewCoctail(name, liquor, cl, garniture)
+
+  coctail.id = database[database.length - 1].id + 1
 
   let form = document.getElementById('add-coctail-form')
   form.reset()
@@ -120,7 +123,8 @@ function filterByLiquor (event) {
   event.preventDefault()
   let liquor = document.getElementById('filter-liquor').value
   let coctails = getCoctailsByLiquor(database, liquor)
-
+  // När jag filtrerar liquor, töms fältet från garnitures sista sökning.
+  document.getElementById('filter-garniture').value = ''
   renderCoctails(coctails)
 }
 //--------------------------------filter by garniture------------------------//
@@ -129,7 +133,8 @@ function filterByGarniture (event) {
   event.preventDefault()
   let garniture = document.getElementById('filter-garniture').value
   let coctails = getCoctailsByGarniture(database, garniture)
-
+  // När jag filtrerar liquor, töms fältet från garnitures sista sökning.
+  document.getElementById('filter-liquor').value = ''
   renderCoctails(coctails)
 }
 
@@ -155,7 +160,7 @@ function setFilters () {
   garnitureForm.addEventListener('submit', filterByGarniture)
   showAll.addEventListener('click', function () {
     document.getElementById('filter-liquor').value = ''
-    document.getElementById('filter-by-garniture').value = ''
+    document.getElementById('filter-garniture').value = ''
     renderCoctails(database)
   })
 }
