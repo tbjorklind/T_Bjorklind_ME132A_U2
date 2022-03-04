@@ -16,34 +16,36 @@
   <body>
     <div id="wrapper">
       <h1>Coctails</h1>
+      <div id="add-and-filter">
+        <div id="add-coctail">
+          <form id="add-coctail-form">
+            <input id="name" type="text" placeholder=" Coctail" />
+            <input id="liquor" type="text" placeholder=" Liquor" />
+            <input id="cl" type="number" placeholder=" Cl liquor" />
+            <input id="garniture" type="text" placeholder=" Garniture" />
+            <button>Add</button>
+          </form>
+        </div>
+        <div id="filters">
+          <form id="filter-by-liquor">
+            <input
+              id="filter-liquor"
+              type="text"
+              placeholder="Filter by liquor"
+            />
+            <button>Filter</button>
+          </form>
+          <form id="filter-by-garniture">
+            <input
+              id="filter-garniture"
+              type="text"
+              placeholder="Filter by garniture"
+            />
+            <button>Filter</button>
+          </form>
 
-      <form id="add-coctail-form">
-        <input id="name" type="text" placeholder="Coctail" />
-        <input id="liquor" type="text" placeholder="liquor" />
-        <input id="cl" type="number" placeholder="Cl liquor" />
-        <input id="garniture" type="text" placeholder="Garniture" />
-        <button>Add</button>
-      </form>
-
-      <div id="filters">
-        <form id="filter-by-liquor">
-          <input
-            id="filter-liquor"
-            type="text"
-            placeholder="Filter by liquor"
-          />
-          <button>Filter</button>
-        </form>
-        <form id="filter-by-garniture">
-          <input
-            id="filter-garniture"
-            type="text"
-            placeholder="Filter by garniture"
-          />
-          <button>Filter</button>
-        </form>
-
-        <button id="show-all" type="button">Show all coctails</button>
+          <button id="show-all" type="button">Show all coctails</button>
+        </div>
       </div>
 
       <div id="headers">
