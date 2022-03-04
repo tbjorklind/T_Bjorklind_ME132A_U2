@@ -1,124 +1,154 @@
-
 :root {
-    --fontFamily: 'Roboto', sans-serif;
-    --backColor:  rgb(240, 228, 216);
-    --inputColor: rgb(248, 241, 234);
-    --buttonColor: rgb(231, 215, 198);
-    --hoverColor: rgb(126, 113, 95);
-
+  --fontFamily: 'Shadows Into Light';
+  --backColor: rgb(233, 222, 213);
+  --inputColor: rgb(248, 241, 234);
+  --buttonColor: rgb(189, 148, 148);
+  --hoverColor: rgb(209, 97, 97);
 }
 
 body {
-font-family: var(--fontFamily);
-margin: 0;
-background-color: var(--backColor);
+  margin: 0;
+  font-family: var(--fontFamily);
+  font-size: 20px;
+}
+
+#titel {
+  display: flex;
+  flex-direction: row;
+}
+
+#image-coctail {
+  height: 80px;
+  margin-top: 20px;
+  margin-left: 10px;
+  transition: 0.7s;
+  border-radius: 50px;
+}
+#image-coctail:hover {
+  transform: rotate(180deg);
+}
+
+#image-coctails {
+  height: 200px;
+  margin-bottom: 15px;
 }
 
 #wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
+
 h1 {
-    text-align: center;
-    margin-top: 40px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0px;
 }
 
 #headers {
-    display: grid;
-    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr;
-    width: 70vw;
-    border: 1px solid black;
-    padding: 15px 10px;
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr;
+  width: 70vw;
+  border: 1px solid black;
+  padding: 15px 10px;
+  background-color: var(--backColor);
 }
 #coctails {
-    border: 1px solid black;
-    margin-top: 4px;
+  border: 1px solid black;
+  margin-top: 4px;
+  background-color: var(--backColor);
+  border-bottom: 0px;
+  margin-bottom: 10px;
 }
 .coctail {
-    display: grid;
-    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr;
-    width: 70vw;
-    padding: 10px 0px;
-    border-bottom: 1px solid black;
-    padding: 10px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr;
+  width: 70vw;
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  align-items: center;
 }
-#coctails:last-child {
-    border-bottom: 0px;
-}
+
 ol {
-    margin: 0px;
+  margin: 0px;
 }
 li {
-    margin-left: 25px;
+  margin-left: 20px;
 }
-button, input {
-    border-radius: 0px;
-    border: 1px solid black;
-    font-family: var(--fontFamily);
-    padding: 5px 0px;
+
+button,
+input {
+  border-radius: 0px;
+  border: 1px solid black;
+  font-family: var(--fontFamily);
+  padding: 5px 0px;
+  font-size: 20px;
 }
 
 button {
-    background-color: var(--buttonColor);
+  background-color: var(--buttonColor);
 }
 input {
-    background-color: var(--inputColor);
+  background-color: var(--inputColor);
 }
 
 #add-coctail form {
-    display: flex;
-    width: 70vw;
-    justify-content: center;
+  display: flex;
+  width: 70vw;
+  justify-content: center;
 }
 
-#add-coctail-form input, #filters input {
-    margin: 10px 2px;
-    padding: 8px 5px;
-    flex-grow: 1;
+#add-coctail-form input,
+#filters input {
+  margin: 10px 2px;
+  padding: 8px 5px;
 }
 
-#add-coctail-form button, #filters button {
-    flex-grow: 1;
-    width: 100px;
-    margin: 10px 2px;
+#add-coctail-form button,
+#filters button {
+  flex-grow: 1;
+  width: 100px;
+  margin: 10px 2px;
 }
 
-#add-coctail-form, #filters {
-    display: flex;
-    width: 70vw;
-    justify-content: center;
+#add-coctail-form,
+#filters {
+  display: flex;
+  width: 70vw;
+  justify-content: center;
 }
 
-#filter-by-liquor, #filter-by-garniture {
-    display: flex;
-    margin-right: 20px;
+#filter-by-liquor,
+#filter-by-garniture {
+  display: flex;
+  margin-right: 20px;
 }
 
 #cl {
-width: 100px;
+  width: 100px;
 }
 
 #add-and-filter {
-    border: 1px solid black;
-    padding: 8px;
-    margin-bottom: 40px;
+  border: 1px solid black;
+  padding: 8px;
+  margin-bottom: 40px;
+  background-color: var(--backColor);
 }
 button:hover {
-    box-shadow: 0 0 5px var(--hoverColor);
-    cursor: pointer;
+  box-shadow: 0 0 5px var(--hoverColor);
+  cursor: pointer;
 }
 
 #button-div {
-    display: flex;
-    width: 70vw;
-    justify-content: start;
-    margin-bottom: 15px;
+  display: flex;
+  width: 70vw;
+  justify-content: start;
+  margin-bottom: 15px;
 }
 
 #add {
-    margin-left: -10px;
-    padding: 5px 45px;
+  margin-left: -10px;
+  padding: 5px 45px;
 }

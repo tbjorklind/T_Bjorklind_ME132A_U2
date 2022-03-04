@@ -72,13 +72,13 @@ let database = [
     liquor: 'Whisky',
     cl: 6,
     garniture: 'Mint'
-  }
+  },
 
-  // {
-  //   id: 10,
-  //   name: 'Frozen Strawberry Daiquiri',
-  //   liquor: 'Rom',
-  //   cl: 5,
-  //   garniture: 'Strawberry'
-  // }
+  {
+    id: 10,
+    name: 'Cuba Libre',
+    liquor: 'Rum',
+    cl: 5,
+    garniture: 'Lime'
+  }
 ]

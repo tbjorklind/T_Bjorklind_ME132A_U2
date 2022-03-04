@@ -10,7 +10,7 @@ function createNewCoctail (name, liquor, cl, garniture) {
   }
   return coctail
 }
-// Push new coctail in to database
+// Pushes cocktails in to database
 function addCoctailToDatabase (database, coctail) {
   database.push(coctail)
 }
@@ -32,7 +32,7 @@ function renderCoctail (coctail) {
     `
   return div
 }
-
+// Creates an element that appends all cocktails
 function renderCoctails (coctails) {
   let coctailsElement = document.getElementById('coctails')
   coctailsElement.innerHTML = ''
@@ -45,7 +45,7 @@ function renderCoctails (coctails) {
 }
 
 //------------------------remove coctail------------------------//
-
+// Removes coctails by id
 function removeCoctailById (database, id) {
   for (let i = 0; i < database.length; i++) {
     let coctail = database[i]
@@ -55,7 +55,7 @@ function removeCoctailById (database, id) {
     }
   }
 }
-
+// Added event listener and alert, on remove
 function removeCoctailWithClick () {
   let buttons = document.querySelectorAll('.coctail button')
 
@@ -77,7 +77,7 @@ function removeCoctailWithClick () {
 }
 
 //----------------------------add coctail----------------------------//
-
+// function to add new coctail
 function addCoctail (event) {
   event.preventDefault()
 
@@ -92,7 +92,8 @@ function addCoctail (event) {
 
   let form = document.getElementById('add-coctail-form')
   form.reset()
-
+  
+// Alert that visitor must fill all fields
   if (name == '' || liquor == '' || cl == '' || garniture == '') {
     alert('Oh, not all fields were filled. Try again!')
   } else {
@@ -100,7 +101,7 @@ function addCoctail (event) {
     renderCoctails(database)
   }
 }
-
+// Added event listener
 function addClickToAddButton () {
   let form = document.getElementById('add-coctail-form')
   form.addEventListener('submit', addCoctail)
@@ -123,7 +124,8 @@ function filterByLiquor (event) {
   event.preventDefault()
   let liquor = document.getElementById('filter-liquor').value
   let coctails = getCoctailsByLiquor(database, liquor)
-  // När jag filtrerar liquor, töms fältet från garnitures sista sökning.
+
+  // When I filter "garniture", the field is emptied from "liquors" last search.
   document.getElementById('filter-garniture').value = ''
   renderCoctails(coctails)
 }
@@ -133,7 +135,8 @@ function filterByGarniture (event) {
   event.preventDefault()
   let garniture = document.getElementById('filter-garniture').value
   let coctails = getCoctailsByGarniture(database, garniture)
-  // När jag filtrerar liquor, töms fältet från garnitures sista sökning.
+
+  // When I filter "liquor", the field is emptied from "garniture's last search.
   document.getElementById('filter-liquor').value = ''
   renderCoctails(coctails)
 }
@@ -161,14 +164,13 @@ function setFilters () {
   showAll.addEventListener('click', function () {
     document.getElementById('filter-liquor').value = ''
     document.getElementById('filter-garniture').value = ''
+
     renderCoctails(database)
   })
 }
 
 //------------------------------------------------------------------------//
 
-
 addClickToAddButton()
 setFilters()
 renderCoctails(database)
-
