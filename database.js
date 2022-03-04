@@ -3,7 +3,6 @@
 // My array of coctails
 let database = [
   {
-    nr: 1,
     id: 1,
     name: 'Gin & Tonic',
     liquor: 'Gin',
@@ -12,7 +11,6 @@ let database = [
   },
 
   {
-    nr: 2,
     id: 2,
     name: 'Whisky Sour',
     liquor: 'Whisky',
@@ -21,7 +19,6 @@ let database = [
   },
 
   {
-    nr: 3,
     id: 3,
     name: 'Aperol Spritz',
     liquor: 'Aperol',
@@ -30,7 +27,6 @@ let database = [
   },
 
   {
-    nr: 4,
     id: 4,
     name: 'Moscow mule',
     liquor: 'Vodka',
@@ -39,7 +35,6 @@ let database = [
   },
 
   {
-    nr: 5,
     id: 5,
     name: 'Mojito',
     liquor: 'Rum',
@@ -48,7 +43,6 @@ let database = [
   },
 
   {
-    nr: 6,
     id: 6,
     name: 'Caipirinha',
     liquor: 'Cachaca',
@@ -57,7 +51,6 @@ let database = [
   },
 
   {
-    nr: 7,
     id: 7,
     name: 'Amaretto Sour',
     liquor: 'Amaretto',
@@ -66,7 +59,6 @@ let database = [
   },
 
   {
-    nr: 8,
     id: 8,
     name: 'Gin Fizz',
     liquor: 'Gin',
@@ -75,7 +67,6 @@ let database = [
   },
 
   {
-    nr: 9,
     id: 9,
     name: 'Mint Julep',
     liquor: 'Whisky',
@@ -84,7 +75,6 @@ let database = [
   }
 
   // {
-  //   nr: 10,
   //   id: 10,
   //   name: 'Frozen Strawberry Daiquiri',
   //   liquor: 'Rom',

@@ -48,7 +48,12 @@ h1 {
 #coctails:last-child {
     border-bottom: 0px;
 }
-
+ol {
+    margin: 0px;
+}
+li {
+    margin-left: 25px;
+}
 button, input {
     border-radius: 0px;
     border: 1px solid black;

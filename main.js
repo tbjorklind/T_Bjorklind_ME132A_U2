@@ -23,7 +23,7 @@ function renderCoctail (coctail) {
   div.classList.add('coctail')
   div.id = coctail.id
   div.innerHTML = `
-    <div>${coctail.nr}</div>
+    <li type ="1"></li>
     <div>${coctail.name}</div>
     <div>${coctail.liquor}</div>
     <div>${coctail.cl}</div>
@@ -167,6 +167,8 @@ function setFilters () {
 
 //------------------------------------------------------------------------//
 
+
 addClickToAddButton()
 setFilters()
 renderCoctails(database)
+
