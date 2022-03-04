@@ -92,8 +92,8 @@ function addCoctail (event) {
 
   let form = document.getElementById('add-coctail-form')
   form.reset()
-  
-// Alert that visitor must fill all fields
+
+  // Alert that visitor must fill all fields
   if (name == '' || liquor == '' || cl == '' || garniture == '') {
     alert('Oh, not all fields were filled. Try again!')
   } else {
